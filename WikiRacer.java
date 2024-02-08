@@ -6,8 +6,7 @@ import java.util.Set;
 /**
  * 
  * @author jonathan silvestri
- * @project PA10BONUS - WikiRacer
- * @class CSc 210 Fall 2021
+ * @project WikiRacer
  * @description - Program takes the names of two wikipedia pages and finds
  * a path from the starting page to the target page exploring only links embedded
  * in the articles. if no path is found, then null is returned.
@@ -17,15 +16,14 @@ import java.util.Set;
 /**
  * wikiracer class
  * main code that handles the searching algorithm and searches thru the wikipedia
- * links
+ * links. WIkipedia article names should be passed in through commandline
+ * arg1- source page
+ * arg2- target page
  *
  */
 public class WikiRacer {
 	private static int pagesVisited = 0;
 
-	/*
-	 * Do not edit this main function
-	 */
 	public static void main(String[] args) {
 		System.out.println("Start Page: " + args[0]);
 		System.out.println("Target Page: " + args[1]);
@@ -75,7 +73,7 @@ public class WikiRacer {
 			}
 			
 			currentPageLinks.parallelStream().forEach(link -> {
-				WikiScraper.findWikiLinks(link);
+				scraper.findWikiLinks(link);
 				});
 				
 			// otherwise, look at all the pages on the current page, and create a new ladder going to each of them

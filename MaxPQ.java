@@ -3,8 +3,7 @@ import java.util.ArrayList;
 /**
  * 
  * @author jonathan silvestri
- * @project PA10BONUS - MaxPQ
- * @class CSc 210 Fall 2021
+ * @project WikiRacer - MaxPQ
  * @description - Priority Queue for the WikiRace ladders. Custom Priority queue
  * based upon a binary Max-Heap. supports just the essential priority queue methods (enqueue/dequeue)
  *

@@ -1,18 +1,14 @@
 import java.io.InputStream;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /**
  * 
  * @author jonathan silvestri
- * @project PA10BONUS - WikiScraper
- * @class CSc 210 Fall 2021
+ * @project WikiScraper
  * @description - WikiScraper class has various methods to get and parse various information
  * from wikipedia. Can retrieve links and html from wikipedia pages.
  *
@@ -34,7 +30,7 @@ public class WikiScraper {
 	 * @param link - link name of a wikipedia page
 	 * @return links - Set<String> of all links contained on the specified page
 	 */
-	public static Set<String> findWikiLinks(String link) {
+	public Set<String> findWikiLinks(String link) {
 		// if findWikiLinks method has already been called for link, saved return value is returned
 		if (pageSets.containsKey(link))
 			return pageSets.get(link);
@@ -52,7 +48,7 @@ public class WikiScraper {
 	 * @param link - name of the page to have its html fetched
 	 * @return string of the HTML code from specified page
 	 */
-	private static String fetchHTML(String link) {
+	private String fetchHTML(String link) {
 		// new string buffer
 		StringBuffer buffer = null;
 		try {
@@ -77,7 +73,7 @@ public class WikiScraper {
 	 * @param link -  name of the wikipedia page
 	 * @return url - link = Dog --> https://en.wikipedia.org/wiki/Dog
 	 */
-	private static String getURL(String link) {
+	private String getURL(String link) {
 		return "https://en.wikipedia.org/wiki/" + link;
 	}
 	
@@ -86,9 +82,9 @@ public class WikiScraper {
 	 * @param html - string of the HTML code for a wikipedia page
 	 * @return links - HashSet<String> of all the links contained on the specified page
 	 */
-	private static Set<String> scrapeHTML(String html) {
+	private Set<String> scrapeHTML(String html) {
 		// calls helper function to look for all links in the html
-		Set<String> links = WikiScraper.matchFinder(html);
+		Set<String> links = matchFinder(html);
 		return links;
 	}
 	
@@ -104,7 +100,7 @@ public class WikiScraper {
 	 * @param html - the string of html code that makes up a wikipedia page
 	 * @return allMatches - a set of link names contained within the html
 	 */
-	private static Set<String> matchFinder(String html){
+	private Set<String> matchFinder(String html){
 		 Set<String> allMatches = new HashSet<String>();
 		 // compiles a regex statement to find matches in the html
 		 Matcher m = Pattern.compile("<a href=\"/wiki/[^:#\"]+\"").matcher(html); // match looks like <a href="/wiki/ and has no : or # characters

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * shitty little  class needed in order to make the priority queue function.
+ * Class needed in order to make the priority queue function.
  * essentially makes a tuple of a List<String> and an integer (Priority),
  * so each ladder can be associated with a priority and put into the correct
  * spot in the priority queue
