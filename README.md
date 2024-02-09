@@ -8,21 +8,13 @@ Output will include the path that was taken between the two pages, along with th
 WikiRacer uses an association heuristic to determine which pages to traverse through. Pages are given priority based on how many embedded links that they share with the target page. Possible paths are stored in a priority queue, where the priority value is calculated based on how many embedded links a page shares with the target
 
 ## how to use
-Clone this repository, and compile with
+Clone this repository, and compile with ```make wikiracer```
 
-```make wikiracer```
+Search can be run by providing the names of two Wikipedia arguments. ```arg1 -- source page``` ```arg2 -- target page```
 
-Search can be run by providing the names of two Wikipedia arguments.
+EX: ```java WikiRacer Stanford_university emu```
 
-arg1 -- source page
-
-arg2 -- target page
-
-```java WikiRacer Stanford_university emu```
-
-clear executables with 
-
-```make clean```
+clear executables with ```make clean```
 
 ## Sample output
 
