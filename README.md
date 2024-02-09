@@ -24,4 +24,4 @@ clear executables with
 
 ```make clean```
 
-![Sample Output](sample_output.png)
+<img src="sample_output.png" alt="output" width="300" height="200">
