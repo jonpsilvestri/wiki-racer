@@ -24,4 +24,4 @@ clear executables with
 
 ```make clean```
 
-![alt text](https://github.com/[jonpsilvestri]/[wikiracer]/blob/[main]/sample_output.png?raw=true)
+![Sample Output](sample_output.png)
