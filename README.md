@@ -9,7 +9,7 @@ WikiRacer uses an association heuristic to determine which pages to traverse thr
 
 ## how to use
 Clone this repository, and compile WikiRacer.java with
-```javac Wikiracer.java```
+```javac WikiRacer.java```
 Search can be run by providing the names of two Wikipedia arguments.
 arg1 -- source page
 arg2 -- target page
