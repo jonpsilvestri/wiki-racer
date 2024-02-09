@@ -1,7 +1,17 @@
 # wiki-racer
-A java project that will find a path from one Wikipedia article to the other using only links embedded in the article
+Finds and displays a path between two wikipedia articles using links embedded in Wikipedia articles
+
 A start page and destination page can be given in the command line (2 total commandline arguments)
 
 Output will include the path that was taken between the two pages, along with the total number of pages visited in the search
 
-WikiRacer uses an association heuristic to determine which pages to traverse through. Any given traversal ladder will have a priority associated with it, which is calculated by seeing how many links the current page (last link in the ladder) has in common with the target page. These ladders are added to a Max Priority Queue, and the ladders with the most links in common with the target will be explored first. If a link in the ladder contains the link target page, the target page is added to the ladder, and the search is terminated
+WikiRacer uses an association heuristic to determine which pages to traverse through. Pages are given priority based on how many embedded links that they share with the target page. Possible paths are stored in a priority queue, where the priority value is calculated based on how many embedded links a page shares with the target
+
+## how to use
+Clone this repository, and compile WikiRacer.java with
+```javac Wikiracer.java```
+Search can be run by providing the names of two Wikipedia arguments.
+arg1 -- source page
+arg2 -- target page
+
+```java WikiRacer Stanford_university emu```
