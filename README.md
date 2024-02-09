@@ -24,4 +24,6 @@ clear executables with
 
 ```make clean```
 
+## Sample output
+
 <img src="sample_output.png" alt="output" width="450" height="150">
