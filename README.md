@@ -13,7 +13,9 @@ Clone this repository, and compile with
 ```make wikiracer```
 
 Search can be run by providing the names of two Wikipedia arguments.
+
 arg1 -- source page
+
 arg2 -- target page
 
 ```java WikiRacer Stanford_university emu```
