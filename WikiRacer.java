@@ -25,6 +25,7 @@ public class WikiRacer {
 	private static int pagesVisited = 0;
 
 	public static void main(String[] args) {
+		long startTime = System.currentTimeMillis();
 		System.out.println("Start Page: " + args[0]);
 		System.out.println("Target Page: " + args[1]);
 		System.out.println();
@@ -33,6 +34,10 @@ public class WikiRacer {
 		System.out.println("\nPATH FOUND:");
 		System.out.println(ladder);
 		System.out.println("Pages Scraped: " + pagesVisited);
+		System.out.println();
+		long endTime = System.currentTimeMillis();
+		long elapsed = (endTime - startTime) / 1000;
+		System.out.println("Time to complete: " + elapsed);
 	}
 
 	/**
