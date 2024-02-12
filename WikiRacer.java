@@ -22,7 +22,8 @@ import java.util.Set;
  *
  */
 public class WikiRacer {
-	private static int pagesVisited = 0;
+	private static int pathsCreated = 0;
+	public static int pagesScraped = 0;
 
 	public static void main(String[] args) {
 		System.out.println("Start Page: " + args[0]);
@@ -32,7 +33,8 @@ public class WikiRacer {
 		List<String> ladder = findWikiLadder(args[0], args[1]);
 		System.out.println("\nPATH FOUND:");
 		System.out.println(ladder);
-		System.out.println("Pages Visited: " + pagesVisited);
+		System.out.println("Pages Scraped: " + pagesScraped);
+		System.out.println("Paths created: " + pathsCreated);
 	}
 
 	/**
@@ -78,8 +80,8 @@ public class WikiRacer {
 				
 			// otherwise, look at all the pages on the current page, and create a new ladder going to each of them
 			for (String neighbor: currentPageLinks) {
-				pagesVisited++;
 				if (!visited.contains(neighbor)) {
+					pathsCreated++;
 					ArrayList<String> copy = new ArrayList<String>(topPath);
 					copy.add(neighbor);
 					Pair copiedLadder = new Pair(copy, WikiRacer.findLadderPriority(copy, targetPageLinks, scraper));
