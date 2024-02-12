@@ -84,7 +84,6 @@ public class WikiScraper {
 	 */
 	private Set<String> scrapeHTML(String html) {
 		// calls helper function to look for all links in the html
-		WikiRacer.pagesScraped++;
 		Set<String> links = matchFinder(html);
 		return links;
 	}
