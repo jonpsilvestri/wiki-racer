@@ -37,7 +37,7 @@ public class WikiRacer {
 		System.out.println();
 		long endTime = System.currentTimeMillis();
 		long elapsed = (endTime - startTime) / 1000;
-		System.out.println("Time to complete: " + elapsed);
+		System.out.println("Time to complete: " + elapsed + " seconds");
 	}
 
 	/**
