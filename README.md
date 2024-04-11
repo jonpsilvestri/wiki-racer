@@ -12,6 +12,8 @@ Clone this repository, and compile with ```make wikiracer```
 
 Search can be run by providing the names of two Wikipedia arguments. ```arg1 -- source page``` ```arg2 -- target page```
 
+The article titles given in the command line _are_ case-sensitive
+
 EX: ```java WikiRacer Stanford_university emu```
 
 clear executables with ```make clean```
