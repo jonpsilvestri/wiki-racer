@@ -77,7 +77,7 @@ public class WikiRacer {
 				topPath.add(end);
 				return topPath;
 			}
-			
+			// additional thread for scraping links from pages
 			currentPageLinks.parallelStream().forEach(link -> {
 				scraper.findWikiLinks(link);
 				});
