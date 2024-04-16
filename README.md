@@ -5,7 +5,7 @@ A start page and destination page can be given in the command line (2 total comm
 
 Output will include the path that was taken between the two pages, along with the total number of pages visited in the search
 
-WikiRacer uses an association heuristic to determine which pages to traverse through. Possible paths are stored in a priority queue, where the priority value is calculated based on how many embedded links a the current page shares with the target page
+WikiRacer uses an association heuristic to determine which pages to traverse through. Possible paths are stored in a priority queue, where the priority value is calculated based on how many embedded links the current page shares with the target page
 
 ## how to use
 Clone this repository, and compile with ```make wikiracer```
